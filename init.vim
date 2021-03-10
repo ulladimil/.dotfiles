@@ -54,7 +54,7 @@ set autoindent
 set ignorecase
 set smartcase
 
-"set wrap 
+set nowrap
 "set linebreak
 
 set scrolloff=3
