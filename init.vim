@@ -97,7 +97,7 @@ let g:python_highlight_space_errors = 0
 let g:vim_current_word#highlight_twins = 1
 let g:vim_current_word#highlight_current_word = 0
 hi CurrentWordTwins ctermbg=241
-hi CurrentWordTwins guibg=#3a3a3a
+hi CurrentWordTwins guibg=#4c566a
 
 let b:ale_linters = ['flake8', 'eslint', 'stylelint', 'vls']
 let g:ale_pattern_options = {
