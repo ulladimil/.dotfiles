@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'jparise/vim-graphql'
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'kristijanhusak/defx-icons'
 call plug#end()
 "filetype plugin indent on
 
@@ -188,7 +189,7 @@ function! s:defx_my_settings() abort
 endfunction
 
 nnoremap <silent><leader>, :<C-u>Defx -listed -resume
-      \ -columns=mark:indent:icon:filename:size:time
+      \ -columns=mark:icons:indent:filename:size:time
       \ -show-ignored-files
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
