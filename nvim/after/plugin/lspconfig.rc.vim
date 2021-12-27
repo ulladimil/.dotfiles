@@ -52,6 +52,7 @@ require'lspconfig'.pyright.setup {
 }
 
 require'lspconfig'.vuels.setup{
+    on_attach = on_attach,
     settings = {
         vetur = {
             format = {
@@ -64,11 +65,18 @@ require'lspconfig'.vuels.setup{
 }
 
 require'lspconfig'.cssls.setup{
+    on_attach = on_attach,
     capabilities = capabilities
 }
 
 require'lspconfig'.jsonls.setup {
-  capabilities = capabilities,
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require'lspconfig'.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
 }
 
 vim.o.completeopt = 'menuone,noselect'
