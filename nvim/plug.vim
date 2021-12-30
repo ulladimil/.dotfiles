@@ -14,4 +14,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'L3MON4D3/LuaSnip'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
 call plug#end()
+
+" For LSP
+" npm install -g pyright vls vscode-langservers-extracted typescript typescript-language-server
+" pip install django-types
