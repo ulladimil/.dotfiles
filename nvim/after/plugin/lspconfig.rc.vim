@@ -35,12 +35,18 @@ local on_attach = function(client, bufnr)
 
 end
 
+local util = require("lspconfig/util")
+
 require'lspconfig'.pyright.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
         debounce_text_changes = 150
     },
+    root_dir = function(fname)
+        return util.root_pattern('.venv', 'venv')(fname) or
+            util.path.dirname(fname)
+    end,
     settings = {
         python = {
             pythonPath = ".venv/bin/python",
