@@ -100,5 +100,17 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias tmux="env TERM=xterm-24bit tmux"
+alias ssh="TERM=xterm ssh"
+
+function cb() {
+    local exist="$(git show-ref refs/heads/$1)"
+    if [ -n "$exist" ]; then
+        git checkout $1
+        git pull origin $1
+    else
+        git fetch origin $1
+        git checkout -b $1 origin/$1
+    fi
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
