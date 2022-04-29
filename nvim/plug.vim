@@ -1,5 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'sainnhe/everforest'
     Plug 'dominikduda/vim_current_word'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'christoomey/vim-tmux-runner'

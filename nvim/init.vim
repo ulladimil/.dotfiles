@@ -9,7 +9,10 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 
-colorscheme nord
+set background=dark
+let g:everforest_background='hard'
+let g:everforest_better_performance=1
+colorscheme everforest
 
 set number
 set cursorline
@@ -20,7 +23,7 @@ set autoindent
 set ignorecase
 set smartcase
 set nowrap
-set scrolloff=3
+set scrolloff=1
 set mouse=a
 set nobackup
 set noswapfile
