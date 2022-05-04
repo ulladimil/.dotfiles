@@ -41,8 +41,8 @@ let g:python_highlight_space_errors = 0
 
 let g:vim_current_word#highlight_twins = 1
 let g:vim_current_word#highlight_current_word = 0
-hi CurrentWordTwins ctermbg=241
-hi CurrentWordTwins guibg=#4c566a
+"hi CurrentWordTwins ctermbg=241
+hi CurrentWordTwins guibg=#485660
 
 set signcolumn=yes
 
