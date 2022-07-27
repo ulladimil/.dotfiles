@@ -34,6 +34,8 @@ set clipboard=unnamedplus
 
 autocmd FileType make set noexpandtab
 
+let g:netrw_banner = 0
+
 runtime ./maps.vim
 
 let g:python_highlight_all = 1
