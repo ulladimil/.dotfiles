@@ -12,7 +12,8 @@ filetype plugin indent on
 set background=dark
 let g:everforest_background='hard'
 let g:everforest_better_performance=1
-colorscheme everforest
+"colorscheme everforest
+colorscheme tokyonight-moon
 
 set number
 set cursorline
@@ -44,7 +45,8 @@ let g:python_highlight_space_errors = 0
 let g:vim_current_word#highlight_twins = 1
 let g:vim_current_word#highlight_current_word = 0
 "hi CurrentWordTwins ctermbg=241
-hi CurrentWordTwins guibg=#485660
+"hi CurrentWordTwins guibg=#485660
+hi CurrentWordTwins guibg=#42486D
 
 set signcolumn=yes
 
