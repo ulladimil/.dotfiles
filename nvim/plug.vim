@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'kristijanhusak/defx-icons'
+    Plug 'williamboman/mason.nvim'
+    Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/cmp-nvim-lsp'
@@ -18,6 +20,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 call plug#end()
 
 " For LSP

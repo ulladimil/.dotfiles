@@ -60,3 +60,16 @@ let g:vrc_auto_format_response_enabled = 1
 
 " git-gutter
 set updatetime=100
+
+lua << EOF
+require("mason").setup()
+EOF
+
+lua << EOF
+require("bufferline").setup{
+    options = {
+        mode = "tabs",
+        always_show_bufferline = false
+    }
+}
+EOF
