@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-live-grep-args.nvim'
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 call plug#end()
