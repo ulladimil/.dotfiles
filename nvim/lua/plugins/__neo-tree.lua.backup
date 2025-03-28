@@ -1,0 +1,37 @@
+return {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "MunifTanjim/nui.nvim"
+  },
+  config = function()
+    -- vim.keymap.set('n', '<leader>,', ':Neotree filesystem reveal float<CR>', {})
+
+    require("neo-tree").setup({
+      close_if_last_window = false,
+      window = {
+        position = "float",
+        width = 60,
+        mappings = {
+          ["<cr>"] = "open",
+          ["l"] = "open",
+          ["h"] = "close_node",
+        }
+      },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_hidden = false,
+          never_show = {
+            ".DS_Store",
+            "thumbs.db",
+            "__pycache__"
+          },
+        },
+      }
+    })
+  end
+}

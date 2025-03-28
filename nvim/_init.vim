@@ -73,3 +73,45 @@ require("bufferline").setup{
     }
 }
 EOF
+
+" for nvim-tree
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
+highlight NvimTreeGitDirty guifg=#d08770
+highlight NvimTreeGitNew guifg=#a3be8c
+highlight NvimTreeGitDeleted guifg=#bf616a
+highlight NvimTreeGitStaged guifg=#b48ead
+highlight NvimTreeGitMerge guifg=#ebcb8b
+highlight NvimTreeGitRenamed guifg=#88c0d0
+highlight NvimTreeGitIgnored guifg=#7c818c
+
+lua << EOF
+require("nvim-tree").setup({
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    ignore_list = {}
+  },
+  filters = {
+    dotfiles = false,
+    custom = { '__pycache__', '.DS_Store' }
+  },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 1000
+  },
+  renderer = {
+    highlight_git = true,
+    icons = {
+      show = {
+        git = false
+      }
+    }
+  }
+})
+EOF
+
+nnoremap <leader>, :NvimTreeToggle<CR>
+

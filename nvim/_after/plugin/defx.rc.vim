@@ -65,8 +65,8 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 
-nnoremap <silent><leader>, :<C-u>Defx -listed -resume
-      \ -columns=mark:icons:indent:filename:size:time
-      \ -show-ignored-files
-      \ -buffer-name=tab`tabpagenr()`
-      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
+" nnoremap <silent><leader>, :<C-u>Defx -listed -resume
+"       \ -columns=mark:icons:indent:filename:size:time
+"       \ -show-ignored-files
+"       \ -buffer-name=tab`tabpagenr()`
+"       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
