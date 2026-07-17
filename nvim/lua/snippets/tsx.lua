@@ -5,18 +5,17 @@ local t = ls.text_node
 ls.add_snippets('typescriptreact', {
   s('mycomp', {
     t({
-      "import {type ComponentProps, useState, useMemo, useEffect, useRef} from 'react'",
+      "import {useState, useMemo, useEffect, useRef} from 'react'",
       "import cn from 'classnames'",
       "",
-      "interface Props extends ComponentProps<'div'> {",
+      "interface Props {",
       "}",
       "",
-      "export default function MyComponent = (props: Props) => {",
-      "  const {className, ...restProps} = props",
+      "export default function MyComponent(props: Props) {",
+      "  const {className} = props",
       "",
       "  return (",
       "    <div",
-      "      {...restProps}",
       "      className={cn('my-component', className)}",
       "    >",
       "    </div>",

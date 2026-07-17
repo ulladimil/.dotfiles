@@ -114,3 +114,14 @@ function cb() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey -r '^T'
+export TERM=xterm-256color
+
+function proxy() {
+  local proxy_url="socks5h://10.1.11.159:1080"
+  ALL_PROXY="$proxy_url" \
+  HTTP_PROXY="$proxy_url" \
+  HTTPS_PROXY="$proxy_url" \
+  "$@"
+}
