@@ -6,9 +6,10 @@ vim.api.nvim_create_autocmd('FileType', {
       return
     end
 
-    local parser = vim.treesitter.get_parser(event.buf)
-    if parser then
-      vim.treesitter.start(event.buf)
+    local lang = vim.treesitter.language.get_lang(event.match)
+
+    if lang and vim.treesitter.language.add(lang) then
+      vim.treesitter.start(event.buf, lang)
     end
   end
 })
