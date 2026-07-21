@@ -1,0 +1,19 @@
+onboarding = false
+
+[keys]
+prefix = 'ctrl+t'
+split_horizontal = 'prefix+"'
+split_vertical = 'prefix+%'
+rename_tab = 'prefix+,'
+
+[ui]
+pane_borders = true
+pane_gaps = false
+agent_panel_sort = "spaces"
+
+[ui.toast]
+delivery = "off"
+
+[theme]
+name = "dracula"
+auto_switch = false
