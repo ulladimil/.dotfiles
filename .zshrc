@@ -102,6 +102,10 @@ alias vim="nvim"
 alias tmux="env TERM=xterm-24bit tmux"
 alias ssh="TERM=xterm ssh"
 
+function open() {
+    xdg-open "$@" </dev/null >/dev/null 2>&1 &!
+}
+
 function cb() {
     local exist="$(git show-ref refs/heads/$1)"
     if [ -n "$exist" ]; then
