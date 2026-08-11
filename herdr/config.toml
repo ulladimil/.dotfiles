@@ -15,5 +15,5 @@ agent_panel_sort = "spaces"
 delivery = "off"
 
 [theme]
-name = "dracula"
+name = "terminal"
 auto_switch = false
